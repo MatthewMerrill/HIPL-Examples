@@ -1,0 +1,16 @@
+#import.static Standard.*
+#import.static Thread.when, Thread.whenever
+#import HIFF
+
+#class Alien -> string {
+	make = do super("lmao");
+}
+
+println("Hello World! Give me a number?");
+
+when(readint(),
+	x -> println("a${'y'*x} lmao")
+	e -> errorln("Houston we have a prolem: ${e}"));
+
+whenever(HIFF.route("/ayy"),
+	do new Alien());
